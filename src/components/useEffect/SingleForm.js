@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './effect.css';
+import { Message } from './Message';
 
 export const SingleForm = () => {
 
@@ -47,6 +48,8 @@ export const SingleForm = () => {
                 className="form-control" name="email" id="" aria-describedby="email-form" placeholder="enter your email" value={email} onChange={handleInputChange}/>
                 <small className="form-text text-muted">Email</small>
             </div>
+
+            { (name === '123') && <Message />}
         </div>
     )
 }
