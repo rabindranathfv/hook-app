@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useForm } from '../../hooks/useForm';
 
 export const FormWithCustomHook = () => {
@@ -11,9 +11,14 @@ export const FormWithCustomHook = () => {
 
     const { name, email, password } = formState;
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        console.log(formState)
+    }
 
     return (
-        <div>
+        <form onSubmit={handleSubmit}>
             <h1> FormWithCustomHook </h1>
             <hr />
 
@@ -34,6 +39,7 @@ export const FormWithCustomHook = () => {
                 <small className="form-text text-muted">password</small>
             </div>
 
-        </div>
+            <button type="submit" className="btn btn-outline-primary"> Submit</button>
+        </form>
     )
 }
