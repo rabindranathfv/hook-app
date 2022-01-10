@@ -10,10 +10,19 @@ export const SingleForm = () => {
 
     const { name, email } = formState;
 
+    // just execute one time at render component
     useEffect(() => {
         console.log('hey!!')
-        
     }, []);
+
+    // execute every time form updates or re-render
+    useEffect(() => {
+        console.log('Listem all formState changes')
+    }, [formState])
+
+    useEffect(() => {
+        console.log('listem email changes')
+    }, [email])
 
     const handleInputChange = (e) => {
         setFormState({
@@ -35,7 +44,7 @@ export const SingleForm = () => {
 
                 <label htmlFor=""></label>
                 <input type="text"
-                className="form-control" name="email" id="" aria-describedby="email-form" placeholder="enter your email" value={email}/>
+                className="form-control" name="email" id="" aria-describedby="email-form" placeholder="enter your email" value={email} onChange={handleInputChange}/>
                 <small className="form-text text-muted">Email</small>
             </div>
         </div>
