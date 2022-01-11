@@ -1,6 +1,8 @@
 import React from 'react';
 import { useForm } from '../../hooks/useForm';
 
+import './effect.css';
+
 export const FormWithCustomHook = () => {
     
     const [formState, handleInputChange] = useForm({
@@ -13,7 +15,6 @@ export const FormWithCustomHook = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
         console.log(formState)
     }
 
