@@ -49,6 +49,7 @@ export const SingleForm = () => {
                 <small className="form-text text-muted">Email</small>
             </div>
 
+            {/* data just for show component */}
             { (name === '123') && <Message />}
         </div>
     )

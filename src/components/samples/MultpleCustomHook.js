@@ -15,7 +15,7 @@ export const MultpleCustomHook = () => {
 
     return (
         <div>
-            <h2> BreakingBad Quites</h2>
+            <h2> BreakingBad Quotes</h2>
 
             <hr />
 
@@ -31,7 +31,7 @@ export const MultpleCustomHook = () => {
             </blockquote>
             }
 
-            <button type="button" class="btn btn-outline-primary" onClick={add}> next Quote </button>            
+            <button type="button" className="btn btn-outline-primary" onClick={add}> next Quote </button>            
         </div>
     )
 }

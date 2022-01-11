@@ -6,11 +6,12 @@ import './index.css';
 // import { SingleForm } from './components/useEffect/SingleForm';
 // import { FormWithCustomHook } from './components/useEffect/FormWithCustomHook'; 
 // import { MultpleCustomHook } from './components/samples/MultpleCustomHook';
-import { FocusScreen } from './components/useRef/FocusScreen';
+// import { FocusScreen } from './components/useRef/FocusScreen';
+import { Layout } from './components/useLayaout/Layout';
 
 ReactDOM.render(
   <React.StrictMode>
-    <FocusScreen />
+    <Layout />
   </React.StrictMode>,
   document.getElementById('root')
 );
