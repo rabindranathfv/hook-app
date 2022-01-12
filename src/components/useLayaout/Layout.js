@@ -22,7 +22,7 @@ export const Layout = () => {
 
     return (
         <div>
-            <h2> Layoutes Quotes</h2>
+            <h2> Layouts Quotes</h2>
 
             <hr />
        

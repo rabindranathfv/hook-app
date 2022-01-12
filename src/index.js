@@ -7,11 +7,12 @@ import './index.css';
 // import { FormWithCustomHook } from './components/useEffect/FormWithCustomHook'; 
 // import { MultpleCustomHook } from './components/samples/MultpleCustomHook';
 // import { FocusScreen } from './components/useRef/FocusScreen';
-import { Layout } from './components/useLayaout/Layout';
+// import { Layout } from './components/useLayaout/Layout';
+import { MemoHook } from './components/memo/MemoHook';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Layout />
+    <MemoHook />
   </React.StrictMode>,
   document.getElementById('root')
 );
