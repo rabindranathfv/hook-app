@@ -8,11 +8,12 @@ import './index.css';
 // import { MultpleCustomHook } from './components/samples/MultpleCustomHook';
 // import { FocusScreen } from './components/useRef/FocusScreen';
 // import { Layout } from './components/useLayaout/Layout';
-import { MemoHook } from './components/memo/MemoHook';
+// import { MemoHook } from './components/memo/MemoHook';
+import { UseCallback } from './components/useCallback/UseCallback';
 
 ReactDOM.render(
   <React.StrictMode>
-    <MemoHook />
+    <UseCallback />
   </React.StrictMode>,
   document.getElementById('root')
 );
