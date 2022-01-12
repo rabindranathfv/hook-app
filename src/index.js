@@ -9,11 +9,12 @@ import './index.css';
 // import { FocusScreen } from './components/useRef/FocusScreen';
 // import { Layout } from './components/useLayaout/Layout';
 // import { MemoHook } from './components/memo/MemoHook';
-import { UseCallback } from './components/useCallback/UseCallback';
+// import { UseCallback } from './components/useCallback/UseCallback';
+import { TodoApp } from './components/useReducer/TodoApp';
 
 ReactDOM.render(
   <React.StrictMode>
-    <UseCallback />
+    <TodoApp />
   </React.StrictMode>,
   document.getElementById('root')
 );

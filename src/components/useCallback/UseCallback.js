@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useState, useEffect } from 'react';
 import { ShowIncrement } from './ShowIncrement';
 
 import '../../App.css';
@@ -7,12 +7,15 @@ export const UseCallback = () => {
 
     const [counter, setCounter] = useState(10);
 
-    const add = useCallback(
-        ( incr ) => {
-            setCounter( val => val + incr)
+    const add = useCallback(( {incr, factor} ) => 
+        {
+            setCounter( val => val + incr*factor)
         },
-        [setCounter],
-    )
+        [setCounter])
+
+    useEffect(() => {
+        // 
+    }, [add])
 
     return (
         <div>
