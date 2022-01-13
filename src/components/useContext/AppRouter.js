@@ -1,21 +1,25 @@
 import React from 'react';
 import {
     BrowserRouter as Router,
-    Switch,
     Route,
+    Routes,
     Link,
     useRouteMatch,
     useParams
 } from 'react-router-dom';
-import { aboutScreen } from './aboutScreen';
+import { AboutScreen } from './AboutScreen';
+import { HomeScreen } from './HomeScreen';
+import { LoginScreen } from './LoginScreen';
 
 export const AppRouter = () => {
     return (
         <Router>
             <div>
-                <switch>
-                    <Route path="/about" component={ aboutScreen } />
-                </switch>
+                <Routes>
+                    <Route path="/about" element={<AboutScreen />} />
+                    <Route path="/login" element={<LoginScreen />} />
+                    <Route path="/" element={<HomeScreen />} />
+                </Routes>
             </div>
         </Router>
     )

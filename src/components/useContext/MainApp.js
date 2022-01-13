@@ -6,7 +6,7 @@ export const MainApp = () => {
         <div>
             <h1> Main App </h1>
             <hr />
-            {/* <AppRouter /> */}
+            <AppRouter />
         </div>
     )
 }

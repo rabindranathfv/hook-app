@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const aboutScreen = () => {
+export const AboutScreen = () => {
     return (
         <div>
             <h1> About Screen </h1>
