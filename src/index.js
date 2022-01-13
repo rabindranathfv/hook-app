@@ -10,12 +10,11 @@ import './index.css';
 // import { Layout } from './components/useLayaout/Layout';
 // import { MemoHook } from './components/memo/MemoHook';
 // import { UseCallback } from './components/useCallback/UseCallback';
-import { TodoApp } from './components/useReducer/TodoApp';
+// import { TodoApp } from './components/useReducer/TodoApp';
+import { MainApp } from './components/useContext/MainApp';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <TodoApp />
-  </React.StrictMode>,
+    <MainApp />,
   document.getElementById('root')
 );
 
