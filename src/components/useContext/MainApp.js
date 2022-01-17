@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { AppRouter } from './AppRouter';
+import { UserContext } from './UserContest';
+
 
 export const MainApp = () => {
+    
+    const [user, setUser] = useState({ name: '', email: ''})
+    
     return (
-        <div>
+        <UserContext.Provider value={ { user, setUser } }>
             <AppRouter />
-        </div>
+        </UserContext.Provider>
     )
 }
