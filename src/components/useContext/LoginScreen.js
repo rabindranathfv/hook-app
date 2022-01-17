@@ -1,4 +1,7 @@
 import React, { useContext, useEffect } from 'react';
+import {Link } from 'react-router-dom';
+   
+
 import { UserContext } from './UserContest';
 
 export const LoginScreen = () => {
@@ -6,7 +9,6 @@ export const LoginScreen = () => {
     const { user, setUser } = useContext(UserContext);
 
     useEffect(() => {
-        console.log('Listem all user changes')
     }, [user])
     
 
@@ -14,10 +16,15 @@ export const LoginScreen = () => {
         console.log(user);
         setUser({
             ...user,
+            id: new Date().getDate().toString(),
             [ e.target.name ] : e.target.value
-    
         })
     };
+
+    const login = (e) => {
+        e.preventDefault();
+        console.log('*** login USER ***');
+    }
 
     return (
         <div>
@@ -35,6 +42,10 @@ export const LoginScreen = () => {
                 className="form-control" name="email" id="" aria-describedby="email-form" placeholder="enter your email" value={user?.email} onChange={handleInputChange}/>
                 <small className="email info">Email</small>
             </div>
+
+            <button type="button" className="btn btn-outline-primary" onClick={login}>
+                <Link to="/about">Sign In</Link>
+                </button>
         </div>
     )
 }
