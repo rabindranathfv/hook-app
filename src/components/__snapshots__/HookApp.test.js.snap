@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HookApp Component:: should render HookApp 1`] = `
+<div>
+  <h1>
+     HELLO HOOKS 
+    <i
+      class="fas fa-h1"
+    />
+  </h1>
+</div>
+`;
