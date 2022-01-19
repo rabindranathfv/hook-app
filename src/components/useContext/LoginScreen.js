@@ -23,7 +23,6 @@ export const LoginScreen = () => {
 
     const login = (e) => {
         e.preventDefault();
-        console.log('*** login USER ***');
     }
 
     return (
@@ -45,7 +44,7 @@ export const LoginScreen = () => {
 
             <button type="button" className="btn btn-outline-primary" onClick={login}>
                 <Link to="/about">Sign In</Link>
-                </button>
+            </button>
         </div>
     )
 }

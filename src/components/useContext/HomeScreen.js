@@ -5,8 +5,6 @@ export const HomeScreen = () => {
 
     const { user, setUser } = useContext(UserContext)
 
-    console.log('USER CONTEXT LOAOD**', user);
-
     return (
         <div>
            <h1> Home Screen </h1>
