@@ -39,7 +39,6 @@ describe('CounterApp::', () => {
     it('Should decrement reset', () => {
         wrapper.find('button').at(2).simulate('click');
         const counterText = wrapper.find('h1').at(0).text().trim();
-        console.log(counterText);
         
         expect(counterText).toBe('Counter1 0');
     });
