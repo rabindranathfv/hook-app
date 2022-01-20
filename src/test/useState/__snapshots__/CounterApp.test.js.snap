@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CounterApp:: should return default values CounterApp 1`] = `
+<div>
+  <h1>
+     Counter1 
+    0
+     
+  </h1>
+  <h1>
+     Counter2 
+    20
+     
+  </h1>
+  <hr />
+  <button
+    class="btn btn-outline-primary"
+    onClick={[Function]}
+    type="button"
+  >
+     +1
+  </button>
+  <button
+    class="btn btn-outline-primary"
+    onClick={[Function]}
+    type="button"
+  >
+     -1
+  </button>
+  <button
+    class="btn btn-outline-primary"
+    onClick={[Function]}
+    type="button"
+  >
+     reset
+  </button>
+  <button
+    class="btn btn-outline-primary"
+    type="button"
+  >
+     +1
+  </button>
+</div>
+`;
