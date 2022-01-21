@@ -3,7 +3,7 @@ import { useCounterQuote } from '../../hooks/useCounterQuote';
 
 describe('useCounterQuote::', () => {
 
-    const initualStateMock = 10;
+    const initialStateMock = 10;
     
     it('Should custom useCounterQuote default values', () => {
         const { result } = renderHook( () => useCounterQuote())
@@ -15,8 +15,8 @@ describe('useCounterQuote::', () => {
         expect(typeof subs).toBe('function');
     });
 
-    it('Should custom useCounterQuote initialice with right values', () => {
-        const { result } = renderHook( () => useCounterQuote(initualStateMock))
+    it('Should custom useCounterQuote initial values', () => {
+        const { result } = renderHook( () => useCounterQuote(initialStateMock))
         const { reset, add, subs,quoteId } = result.current;
 
         expect(quoteId).toEqual(10);
@@ -25,14 +25,45 @@ describe('useCounterQuote::', () => {
         expect(typeof subs).toBe('function');
     });
 
-    it('should custmon useCounterQuote apply reset', () => {
-        const { result } = renderHook( () => useCounterQuote(initualStateMock + 10))
-        const { reset, quoteId } = result.current;
+    it('should custmon useCounterQuote apply add', () => {
+        const { result } = renderHook( () => useCounterQuote(initialStateMock))
+        const { add } = result.current;
 
         act(() => {
-            reset();
-        })
+            add();
+        });
+        const { quoteId } = result.current;
 
+        expect(quoteId).toEqual(11);
+        expect(typeof add).toBe('function');
+    });
+
+    it('should custmon useCounterQuote apply subs', () => {
+        const { result } = renderHook( () => useCounterQuote(initialStateMock))
+        const { subs } = result.current;
+
+        act(() => {
+            subs();
+        });
+        const { quoteId } = result.current;
+        
+        expect(quoteId).toEqual(9);
+        expect(typeof subs).toBe('function');
+    });
+
+    it('should custmon useCounterQuote apply reset successfuly', () => {
+        const { result } = renderHook( () => useCounterQuote(initialStateMock))
+        const { subs, reset } = result.current;
+
+        act(() => {
+            subs();
+        });
+        
+        act(() => {
+            reset();
+        });
+        const { quoteId } = result.current;
+        
         expect(quoteId).toEqual(10);
         expect(typeof reset).toBe('function');
     });
