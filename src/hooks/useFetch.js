@@ -24,7 +24,13 @@ export const useFetch = (url) => {
                     data
                 })
             }
-        });
+        }).catch(() => {
+            setsState({
+                loading: true,
+                error: 'could not load phrase',
+                data: null
+            })
+        })
     }, [url]);
 
     return state;
