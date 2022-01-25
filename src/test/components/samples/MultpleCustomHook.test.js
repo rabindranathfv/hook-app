@@ -53,14 +53,13 @@ describe('MultpleCustomHook::', () => {
 
     afterEach(() => {
         jest.restoreAllMocks();   
-    })
+    });
 
     it('Should render component', () => {
-        useFetch(false);
         expect(wrapper).toMatchSnapshot();
     });
 
-    it('should should loading is false, quote OK and author OK ', () => {
+    it('should should loading is false, quote OK and author OK', () => {
         useFetch();
         const loading = wrapper.find('.alert-info');
         const quote = wrapper.find('.mb-0');
