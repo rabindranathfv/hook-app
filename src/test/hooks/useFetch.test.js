@@ -39,24 +39,4 @@ describe('useFetch::', () => {
         expect(error).toEqual('could not load phrase');
     });
 
-
-
-    // it('should custmon useFetch apply reset successfuly', () => {
-    //     const { result } = renderHook( () => useFetch(initialStateMock))
-    //     const { subs, reset } = result.current;
-
-    //     act(() => {
-    //         subs();
-    //     });
-        
-    //     act(() => {
-    //         reset();
-    //     });
-    //     const { quoteId } = result.current;
-        
-    //     expect(quoteId).toEqual(10);
-    //     expect(typeof reset).toBe('function');
-    // });
-
-
 })
