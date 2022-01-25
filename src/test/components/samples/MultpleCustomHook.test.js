@@ -35,11 +35,17 @@ const useFetchInitMock = {
 jest.mock('../../../hooks/useCounterQuote',
   () => {
     return {
-        useCounterQuote: () => ({
-            add: () => {},
-            quoteId: 10
-            
-        })
+        // you can also write with return in the same sentence
+        // useCounterQuote: () => ({
+        //         add: () => {},
+        //         quoteId: 10
+        // })
+        useCounterQuote: () => {
+            return {
+                add: () => {},
+                quoteId: 10
+            }
+        }
     }
   }
 );
