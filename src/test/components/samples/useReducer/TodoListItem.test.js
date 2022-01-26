@@ -31,17 +31,23 @@ describe('TodoListItem', () => {
     });
     
     it('should render and apply handleToggle', () => {
-        const findDelete = wrapper.find('button');
+        const findToggle = wrapper.find('p');
+        findToggle.simulate('click');
 
-        expect(findDelete.text()).toBe('DELETE');
-        expect(findDelete.props().className).toBe('btn btn-danger');        
-        expect(typeof findDelete.props().onClick).toBe('function');
+        expect(findToggle.props().className).toBe('complete');         
+        expect(typeof findToggle.props().onClick).toBe('function');
+        expect(handleToggleMock).toBeCalled();
+        expect(handleToggleMock).toHaveBeenCalledWith(1);
     });
 
     it('should render and apply handleDelete', () => {
-        const findToggle = wrapper.find('p');
+        const findDelete = wrapper.find('button');
+        findDelete.simulate('click');
         
-        expect(findToggle.props().className).toBe('complete');        
-        expect(typeof findToggle.props().onClick).toBe('function');
+        expect(findDelete.text()).toBe('DELETE');
+        expect(findDelete.props().className).toBe('btn btn-danger');  
+        expect(typeof findDelete.props().onClick).toBe('function');
+        expect(handleDeleteMock).toBeCalled();
+        expect(handleDeleteMock).toHaveBeenCalledWith(1);
     });
 });
