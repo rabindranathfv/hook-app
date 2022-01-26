@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoList should render todoList 1`] = `
+<ul
+  className="list-group list-group-flush"
+>
+  <TodoListItem
+    index={0}
+    key="1"
+    todo={
+      Object {
+        "desc": "t1",
+        "done": false,
+        "id": 1,
+      }
+    }
+  />
+  <TodoListItem
+    index={1}
+    key="2"
+    todo={
+      Object {
+        "desc": "t2",
+        "done": false,
+        "id": 2,
+      }
+    }
+  />
+  <TodoListItem
+    index={2}
+    key="3"
+    todo={
+      Object {
+        "desc": "t3",
+        "done": true,
+        "id": 3,
+      }
+    }
+  />
+</ul>
+`;

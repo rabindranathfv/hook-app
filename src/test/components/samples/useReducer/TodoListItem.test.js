@@ -2,16 +2,16 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { TodoListItem } from '../../../../components/useReducer/TodoListItem';
 
-const todoMock = { id: 1, desc: 'descripcionTest', done: true };
+const todoMock = { id: 1, desc: 'descripcionTest1', done: true };
 const handleDeleteMock = jest.fn();
 const handleToggleMock = jest.fn();
 
 describe('TodoListItem', () => {
 
-    let wrapper = shallow(< TodoListItem todo={todoMock} index={todoMock.id} handleDelete={handleDeleteMock} handleToggle={handleToggleMock}/> );
+    let wrapper = shallow(<TodoListItem todo={todoMock} index={todoMock.id} handleDelete={handleDeleteMock} handleToggle={handleToggleMock}/> );
 
     beforeEach(() => {
-        wrapper = shallow(< TodoListItem todo={todoMock} index={todoMock.id} handleDelete={handleDeleteMock} handleToggle={handleToggleMock}/> );
+        wrapper = shallow(<TodoListItem todo={todoMock} index={todoMock.id} handleDelete={handleDeleteMock} handleToggle={handleToggleMock}/> );
     });
   
     it('should render todoListItem', () => {
@@ -25,16 +25,15 @@ describe('TodoListItem', () => {
     });
 
     it('should render todo with class complete when its done', () => {
-        const completeTodo = wrapper.find('.complete');
+        const completeTodo =  wrapper.find('p');
 
-        expect(completeTodo).toBeTruthy()
+        expect(completeTodo.hasClass('complete')).toBeTruthy();
     });
     
     it('should render and apply handleToggle', () => {
         const findToggle = wrapper.find('p');
         findToggle.simulate('click');
 
-        expect(findToggle.props().className).toBe('complete');         
         expect(typeof findToggle.props().onClick).toBe('function');
         expect(handleToggleMock).toBeCalled();
         expect(handleToggleMock).toHaveBeenCalledWith(1);

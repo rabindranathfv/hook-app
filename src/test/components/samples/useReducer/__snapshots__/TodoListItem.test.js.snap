@@ -11,7 +11,7 @@ exports[`TodoListItem should render todoListItem 1`] = `
   >
     2
     . 
-    descripcionTest
+    descripcionTest1
   </p>
   <button
     className="btn btn-danger"
