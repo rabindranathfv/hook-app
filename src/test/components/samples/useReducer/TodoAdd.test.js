@@ -3,6 +3,15 @@ import { shallow } from 'enzyme';
 import { TodoAdd } from '../../../../components/useReducer/TodoAdd';
 
 const handleAddMock = jest.fn();
+const resetMock = jest.fn();
+const desc = 'create an item';
+const mockData = {
+    target: {
+        value: desc,
+        name: 'description'
+    },
+    preventDefault: () => {}
+};
 
 describe('TodoAdd', () => {
 
@@ -23,20 +32,13 @@ describe('TodoAdd', () => {
   });
 
   it('should call handleSubmit for create a new todo', () => {
-    const desc = 'create an item';
-    const mockData = {
-        target: {
-            value: desc,
-            name: 'description'
-        },
-        preventDefault: () => {}
-    };
-    wrapper.find('input').simulate('change',mockData);
+    const inputDesc = wrapper.find('input').simulate('change',mockData);
     const formSubmit = wrapper.find('form').prop('onSubmit');
     formSubmit(mockData);
-
+    
     expect(handleAddMock).toHaveBeenCalled();
     expect(handleAddMock).toHaveBeenCalledTimes(1);
     expect(handleAddMock).toHaveBeenCalledWith({ id: expect.any(Number), desc, done: false});
+    expect(inputDesc.prop('value')).toBe('');
   });
 });
