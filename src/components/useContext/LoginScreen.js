@@ -13,7 +13,6 @@ export const LoginScreen = () => {
     
 
     const handleInputChange = (e) => {
-        console.log(user);
         setUser({
             ...user,
             id: new Date().getDate().toString(),
