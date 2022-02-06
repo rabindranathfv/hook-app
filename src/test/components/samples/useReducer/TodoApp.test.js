@@ -23,7 +23,6 @@ describe('TodoApp', () => {
     it('Should render all todos from localStorage and todoList component', () => {
         const todoList = wrapper.find('TodoList');
         todoList.debug();
-        console.log('***TODO ', todoList.props());
 
         expect(todoList.props().todos.length).toBe(3);
         expect(typeof todoList.props().handleDelete).toBe('function');
@@ -33,7 +32,6 @@ describe('TodoApp', () => {
     it('Should render todoAddComponent', () => {
         const todoAdd = wrapper.find('TodoAdd');
         todoAdd.debug();
-        console.log('***TODO ', todoAdd.props());
 
         expect(typeof todoAdd.props().handleAddTodo).toBe('function');
     });
