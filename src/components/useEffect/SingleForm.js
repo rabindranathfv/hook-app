@@ -18,15 +18,14 @@ export const SingleForm = () => {
 
     // execute every time form updates or re-render
     useEffect(() => {
-        console.log('Listem all formState changes')
+        console.log('Listem all formState changes');
     }, [formState])
 
     useEffect(() => {
-        console.log('listem email changes')
+        console.log('listem email changes');
     }, [email])
 
     const handleInputChange = (e) => {
-        // console.log('ENTRO**', e.target);
         setFormState({
             ...formState,
             [ e.target.name ] : e.target.value

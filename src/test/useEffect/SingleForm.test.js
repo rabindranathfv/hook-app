@@ -2,7 +2,6 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { SingleForm } from '../../components/useEffect/SingleForm';
 
-
 const inputChangeTest = { 
     target: { 
         name: 'name', 
