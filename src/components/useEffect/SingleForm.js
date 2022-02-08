@@ -13,7 +13,7 @@ export const SingleForm = () => {
 
     // just execute one time at render component
     useEffect(() => {
-        console.log('hey!!')
+        console.log('hey!!');
     }, []);
 
     // execute every time form updates or re-render
@@ -26,6 +26,7 @@ export const SingleForm = () => {
     }, [email])
 
     const handleInputChange = (e) => {
+        // console.log('ENTRO**', e.target);
         setFormState({
             ...formState,
             [ e.target.name ] : e.target.value
